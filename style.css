@@ -1,65 +1,125 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+   
 }
 
 header {
     background-color: #0c0f59;
     color: white;
-    padding: 0.1rem;
-    text-align: center;
+    padding: 1rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin-left: 1rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
-    flex: 1;
+    flex: 1; /* Take up remaining vertical space */
+    padding: 2rem 1rem;
     display: flex;
-    justify-content: center; /* Center align content horizontally */
-    align-items: center; /* Center align content vertically */
+    justify-content: center;
+    align-items: center; /* Center content vertically */
 }
 
+#blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.image-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.text-container {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.text-container h2,
+.text-container p {
+    margin: 0;
+}
+
+.text-container h2 {
+    font-size: 1.25rem;
+}
+
+.text-container p {
+    font-size: 1rem;
+}
 
 footer {
-    background-color: #ffffff;
-    color: rgb(9, 17, 56);
+    background-color: #0c0f59;
+    color: white;
     text-align: center;
     padding: 1rem;
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-/*hello*/
-#blog-posts {
-    text-align: center; /* Ensure blog posts are centered */
-}
-
-.blog-post {
-    display: inline-block; /* Ensures the content is treated as a block for proper centering */
-    text-align: center; /* Center align text in blog posts */
-    max-width: 600px; /* Set a max-width for better readability */
-}
-
-.blog-post img {
-    max-width: 100%; /* Ensure image doesn't exceed its container width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
-    margin: 1cm auto; /* Center align image */
-    max-height: 300px; /* Limit the height of the image */
-    width: auto; /* Ensure the width adjusts according to the height */
 }
