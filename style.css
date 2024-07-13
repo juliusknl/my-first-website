@@ -228,8 +228,9 @@ html {
       }
     
       .hero-image img {
-        width: 10vw;
-        min-width: 40px;
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
         height: auto;
         object-fit: contain;
       }
