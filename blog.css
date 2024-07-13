@@ -75,13 +75,15 @@
 
 @media (max-width: 550px) {
 
-   /* .small-logo {
-        position: fixed; /* Change to fixed positioning 
+    .small-logo {
+        position: fixed; /* Change to fixed positioning */
         left: 1rem;
-        top: 0.5rem; /* Adjust top position 
-        width: 40px;  Adjust size as needed 
+        top: 0.5rem; /* Adjust top position */
+        width: 40px; /* Adjust size as needed */
+        width: 4vw;
+        min-width: 4px;
         height: auto;
-      }*/
+      }
 
     .blog-content {
         margin-left: 1rem; /* Reduce margin for smaller screens */
