@@ -78,7 +78,9 @@
     .small-logo {
         position: fixed; /* Change to fixed positioning */
         left: 1rem;
-        top: 0.5rem; /* Adjust top position */
+        top: 1rem; /* Adjust top position */
+        width: 2.5em;
+        min-width: 1.5em;
         height: auto;
       }
 
