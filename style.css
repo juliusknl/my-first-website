@@ -230,8 +230,8 @@ html {
 
 .custom-logo-size {
     width: 25vw !important; /* Increase size for mobile */
-    min-width: 90px !important;
-    max-width: 1000px !important;
+    min-width: 40px !important;
+    max-width: 80px !important;
 }
 }
   
