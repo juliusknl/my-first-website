@@ -72,15 +72,19 @@
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 5500px) {
     .small-logo {
-        width: 30px; /* Adjust size for smaller screens */
+        width: 40px; /* Adjust size for smaller screens */
     }
 
     .blog-content {
         margin-left: 1rem; /* Reduce margin for smaller screens */
         margin-right: 1rem; /* Reduce margin for smaller screens */
         font-size: 18px; /* Adjust base font size for readability on smaller screens */
+    }
+
+    .hero-image {
+        margin-top: 6rem; /* Increase top margin to ensure it doesn't overlap with the header */
     }
 
     .blog-content h1 {
