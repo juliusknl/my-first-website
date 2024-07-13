@@ -42,17 +42,17 @@ window.onmouseup = () => {
 
 // Add this to your existing script.js
 
-/*let lastScrollTop = 0;
+let lastScrollTop = 0;
 const header = document.querySelector('.blog-header');
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
+
+    if (scrollTop > lastScrollTop && scrollTop > 0) {
+        // Scrolling down and not at the top
         header.classList.add('hidden');
-    } else {
-        // Scrolling up
+    } else if (scrollTop < lastScrollTop || scrollTop === 0) {
+        // Scrolling up or at the top
         header.classList.remove('hidden');
     }
     
