@@ -197,7 +197,7 @@ html {
      
   }
 /* Media query for mobile devices */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 
 
   html, body {
@@ -229,7 +229,7 @@ html {
 }
 
 .custom-logo-size {
-    width: 30vw !important; /* Increase size for mobile */
+    width: 35vw !important; /* Increase size for mobile */
     min-width: 40px !important;
     max-width: 80px !important;
 }
