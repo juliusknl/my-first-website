@@ -39,10 +39,10 @@
     max-width: 800px; /* Limit the width for better readability */
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Arial', sans-serif; /* You can change this to your preferred font */
+    font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
     font-size: 23px; /* Adjust the base font size as needed */
     line-height: 1.8; /* Adds space between lines */
-    color: #a6a5a5; /* Dark grey color for better contrast */
+    color: #cfcfcf; /* Dark grey color for better contrast */
 }
 
 .blog-content h1 {
@@ -69,4 +69,38 @@
 
 .blog-content li {
     margin-bottom: 0.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .small-logo {
+        width: 30px; /* Adjust size for smaller screens */
+    }
+
+    .blog-content {
+        margin-left: 1rem; /* Reduce margin for smaller screens */
+        margin-right: 1rem; /* Reduce margin for smaller screens */
+        font-size: 18px; /* Adjust base font size for readability on smaller screens */
+    }
+
+    .blog-content h1 {
+        font-size: 1.5em; /* Adjust font size for main title */
+    }
+
+    .blog-content h2 {
+        font-size: 1.2em; /* Adjust font size for subheadings */
+    }
+
+    .blog-content p {
+        margin-bottom: 1.5em; /* Adjust space between paragraphs */
+    }
+
+    .blog-content ul,
+    .blog-content ol {
+        padding-left: 1em; /* Adjust padding for lists */
+    }
+
+    .hero-image {
+        margin-top: 2rem; /* Adjust margin for smaller screens */
+    }
 }
