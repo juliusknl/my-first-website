@@ -1,46 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>A German roasting America</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="blog-posts">
-            <!-- Add your image and link here -->
-            <div class="blog-post">
-                <a href="blog1.html">
-                    <div class="image-container">
-                        <img src="donald-trump-kissing.jpg" alt="Blog Image">
-                        <div class="text-container">
-                            <h2>State of America: The Country Already Lost</h2>
-                            <p>My take on what is going on in politics and why we're all gonna die</p>
-                        </div>
-                    </div>
-                </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Dynamic Background Website</title>
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="blog1.html">Blogs</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Julius Knolle</p>
-    </footer>
-
+        </header>
+    <div class="text-container">
+        <a href="blog1.html">
+            <img src="images/logo_J.png" style="width: 10vw; min-width: 40px;" alt="Go to Blog" class="transparent-image">
+        </a>
+    </div>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+

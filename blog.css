@@ -1,0 +1,36 @@
+.small-logo {
+    position: fixed; /* Change to fixed positioning */
+    left: 1rem;
+    top: 0.5rem; /* Adjust top position */
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    z-index: 1001; /* Ensure it's above the header */
+  }
+  
+  
+  /* Add these new styles to your existing CSS */
+  
+  .blog-header {
+    opacity: 0.8;
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .blog-header.hidden {
+    transform: translateY(-100%);
+  }
+  
+  .hero-image {
+    margin-top: 4rem; /* Should match the header height */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2cm;
+  }
