@@ -56,5 +56,5 @@ window.addEventListener('scroll', () => {
         header.classList.remove('hidden');
     }
     
-    lastScrollTop = scrollTop;
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
