@@ -205,7 +205,16 @@ html {
       height: 100vh; /* Ensure it takes full viewport height */
   }
 
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
   .hero-image {
+    position: fixed;
     margin-top: 0; /* Remove top margin on mobile */
     display: flex;
     justify-content: center;
@@ -216,7 +225,7 @@ html {
 }
 
   .hero-image img {
-      width: 70%; /* Adjust the width to make the image larger */
+      width: 100%; /* Adjust the width to make the image larger */
       max-width: 600px; /* Ensure it doesn't get too large on very small screens */
   }
 }
