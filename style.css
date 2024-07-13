@@ -2,6 +2,10 @@ html {
   height: 100%; /* Ensure full height */
 }
 
+  body {
+  height: 100%;
+  margin: 0; /* Ensure no default margin */
+  }
   
   .text-container {
     z-index: 100;
@@ -182,5 +186,29 @@ html {
   
       opacity: 0.7;
     }
-  }
 
+    @media (max-width: 600px) {
+      html, body {
+          height: 100%;
+          overflow: hidden; /* Prevent scrolling */
+      }
+  
+      .text-container {
+          width: 100vw;
+          height: 100vh;
+      }
+  
+      .gradient-bg {
+          height: 100vh; /* Ensure it takes full viewport height */
+      }
+  
+      .hero-image {
+          margin-top: 0; /* Remove top margin on mobile */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%; /* Ensure it takes full height available */
+      }
+    
+  }
+}

@@ -83,10 +83,6 @@
         font-size: 18px; /* Adjust base font size for readability on smaller screens */
     }
 
-    .hero-image {
-        margin-top: 6rem; /* Increase top margin to ensure it doesn't overlap with the header */
-    }
-
     .blog-content h1 {
         font-size: 1.5em; /* Adjust font size for main title */
     }
@@ -105,6 +101,6 @@
     }
 
     .hero-image {
-        margin-top: 2rem; /* Adjust margin for smaller screens */
+        margin-top: 4rem; /* Adjust margin for smaller screens */
     }
 }
