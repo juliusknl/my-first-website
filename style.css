@@ -82,6 +82,8 @@ html {
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     top: 0;
     left: 0;
+    animation: openUp 1s ease-out forwards;
+    transform-origin: center center;
   
     svg {
       display: none;
@@ -105,7 +107,7 @@ html {
       left: calc(50% - var(--circle-size) / 2);
   
       transform-origin: center center;
-      animation: moveVertical 30s ease infinite;
+      animation: moveVertical 30s ease infinite; 
   
       opacity: 1;
     }
@@ -235,6 +237,13 @@ html {
         object-fit: contain;
       }
     }
-    
+    @keyframes openUp {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 
