@@ -190,7 +190,7 @@ html {
     /* Media query for mobile devices */
     @media (max-width: 600px) {
       html, body {
-        height: 80%;
+        height: 60%;
         overflow: hidden;
         position: fixed;
         width: 100%;
