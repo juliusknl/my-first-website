@@ -189,12 +189,10 @@ html {
 
     /* Media query for mobile devices */
 @media (max-width: 600px) {
-  hhtml, body {
-    height: 100%;
-    overflow: hidden; /* Prevent scrolling */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
+  html, body {
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling */
+  }
 
   .text-container {
       width: 100vw;
@@ -205,28 +203,17 @@ html {
       height: 100vh; /* Ensure it takes full viewport height */
   }
 
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
   .hero-image {
-    position: fixed;
-    margin-top: 0; /* Remove top margin on mobile */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ensure it takes full height available */
-    width: 100vw; /* Ensure it takes full width available */
-    overflow: hidden; /* Hide any overflow */
-}
+      margin-top: 0; /* Remove top margin on mobile */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Ensure it takes full height available */
+  }
 
   .hero-image img {
-      width: 100%; /* Adjust the width to make the image larger */
-      max-width: 600px; /* Ensure it doesn't get too large on very small screens */
+      width: 90%; /* Adjust the width to make the image larger */
+      max-width: 400px; /* Ensure it doesn't get too large on very small screens */
   }
 }
     
