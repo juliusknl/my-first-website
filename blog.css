@@ -72,7 +72,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 5500px) {
+@media (max-width: 550px) {
     .small-logo {
         width: 40px; /* Adjust size for smaller screens */
     }
@@ -101,6 +101,6 @@
     }
 
     .hero-image {
-        margin-top: 4rem; /* Adjust margin for smaller screens */
+        margin-top: 6rem; /* Adjust margin for smaller screens */
     }
 }
