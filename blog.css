@@ -27,10 +27,46 @@
     width: 100%;
     display: block;
   }
+ 
   .blog-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 2cm;
-  }
+    align-items: flex-start; /* Align text to the left */
+    margin-left: 6.5cm;
+    margin-right: 6.5cm;
+    margin-top: 2cm;
+    max-width: 800px; /* Limit the width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Arial', sans-serif; /* You can change this to your preferred font */
+    font-size: 23px; /* Adjust the base font size as needed */
+    line-height: 1.8; /* Adds space between lines */
+    color: #a6a5a5; /* Dark grey color for better contrast */
+}
+
+.blog-content h1 {
+    font-size: 2em; /* Larger font size for main title */
+    margin-bottom: 1em;
+    color: #ffffff; /* Black color for headings */
+}
+
+.blog-content h2 {
+    font-size: 2em; /* Size for subheadings */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #000;
+}
+
+.blog-content p {
+    margin-bottom: 3em; /* Space between paragraphs */
+}
+
+.blog-content ul, .blog-content ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+}
+
+.blog-content li {
+    margin-bottom: 0.5em;
+}
