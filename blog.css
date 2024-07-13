@@ -10,7 +10,8 @@
   /* Add these new styles to your existing CSS */
   
   .blog-header {
-    opacity: 0.8;
+    background-color: #000;
+    opacity: 0.9;
     transition: transform 0.7s ease-in-out;
   }
   
@@ -72,13 +73,13 @@
 
 @media (max-width: 550px) {
 
-    .small-logo {
-        position: fixed; /* Change to fixed positioning */
+   /* .small-logo {
+        position: fixed; /* Change to fixed positioning 
         left: 1rem;
-        top: 0.5rem; /* Adjust top position */
-        width: 40px; /* Adjust size as needed */
+        top: 0.5rem; /* Adjust top position 
+        width: 40px;  Adjust size as needed 
         height: auto;
-      }
+      }*/
 
     .blog-content {
         margin-left: 1rem; /* Reduce margin for smaller screens */
