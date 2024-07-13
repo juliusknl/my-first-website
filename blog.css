@@ -79,8 +79,6 @@
         position: fixed; /* Change to fixed positioning */
         left: 1rem;
         top: 0.5rem; /* Adjust top position */
-        width: 4vw;
-        min-width: 4px;
         height: auto;
       }
 
