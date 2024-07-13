@@ -4,7 +4,6 @@
     top: 0.5rem; /* Adjust top position */
     width: 40px; /* Adjust size as needed */
     height: auto;
-    z-index: 1001; /* Ensure it's above the header */
   }
   
   
@@ -72,11 +71,14 @@
 }
 
 @media (max-width: 550px) {
+
     .small-logo {
-        width: 40px; /* Adjust the size for smaller screens */
-        height: auto; /* Maintain aspect ratio */
-        margin-top: 0; /* Reset any top margin for alignment */
-    }
+        position: fixed; /* Change to fixed positioning */
+        left: 1rem;
+        top: 0.5rem; /* Adjust top position */
+        width: 40px; /* Adjust size as needed */
+        height: auto;
+      }
 
     .blog-content {
         margin-left: 1rem; /* Reduce margin for smaller screens */
