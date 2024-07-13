@@ -73,9 +73,9 @@
 
 @media (max-width: 550px) {
     .small-logo {
-        width: auto; /* Adjust size for smaller screens */
-        align-self: center center; /* Align vertically centered within its container */
-        margin-top: 10px;
+        width: 40px; /* Adjust the size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 0; /* Reset any top margin for alignment */
     }
 
     .blog-content {
