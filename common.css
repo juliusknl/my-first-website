@@ -20,6 +20,8 @@ body, h1, p, ul {
     padding: 1.5rem 0.5rem; /* Reduce padding to make the header smaller */
 }
 
+
+
 header .container {
   display:flex;
   align-items: center center;
