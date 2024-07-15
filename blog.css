@@ -207,29 +207,29 @@
 }
 
 .blog-title h1 {
-  font-size: 2.8em; /* Increased size */
+  font-size: 2.8em;  
   margin-bottom: 1em;
   margin-right: 2em;
   margin-top: 2em;
   color: #ffffff;
-  font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+  font-family: 'Times New Roman', Times, serif; 
   font-size: 35px;
 }
 
 .blog-preview h1 {
-  font-size: 1.4em; /* Increased size */
+  font-size: 1.4em; 
   font-weight: normal;
   margin-right: 7em;
   color:#ffffff;
-  font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+  font-family: 'Times New Roman', Times, serif; / 
   line-height: 1.5;
 }
 
-.passcode-entry h1{
+/*.passcode-entry h1{
   align-items: center center;
   margin-top:3em;
   font-size: 25px;
 }
-
+*/
 
   
