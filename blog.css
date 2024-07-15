@@ -112,14 +112,69 @@
     }
 }
 .divider {
-    border-top: 1px solid #bbb;
+    border-top: .5px solid #bbb;
     margin: 0;
     margin-left: 9em;
     margin-right: 9em;
   }
+
+  .filter-options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Adjust this to match your divider's padding */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dropbtn {
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: .5em;
+    background-color: #000000;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #8b8686;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ensure the filter options align with the divider */
+.filter-options, .divider {
+    max-width: 1200px; /* Adjust this value to match your divider's max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
   .blog-content {
     align-items: center;
-     margin-top: 4em;
+     margin-top:3em;
+     font-size: 25px;
   }
 
     .page-header {
@@ -130,36 +185,51 @@
   }
 
   .debate-container {
-    display: flex;
-    margin-top: 2rem; /* Should match the header height */
-    margin-bottom: 10rem;
-  }
-  .debate-image {
-    margin-top: 4rem; /* Should match the header height */
-  }
-  
-  .debate-image img {
-    width: 80%;
-    margin-left: 9em;
-  }
-  .blog-title {
-    font-family: 'Times New Roman', Times, serif;
-    margin-right: 12.2cm;
-    margin-top: 2cm;
-    width: 100%;
-    color: #ffffff;
-    text-decoration: none;
-  }
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 
-  .blog-preview{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12px;
-    margin-top: 2cm;
-    width: 50%;
-    font-weight:1;
-    color: #ffffff;
-    text-decoration: none;
-  }
+.debate-image {
+  width: 250%;
+  margin-top: 4em;
+  padding-right: 1em;
+  margin-left: 7.7em; /* Add left margin to align with divider */
+}
+
+.debate-image img {
+  width: 100%;
+  height: auto;
+}
+
+.debate-text {
+  width: 50%;
+}
+
+.blog-title h1 {
+  font-size: 2.8em; /* Increased size */
+  margin-bottom: 1em;
+  margin-right: 2em;
+  margin-top: 2em;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+  font-size: 35px;
+}
+
+.blog-preview h1 {
+  font-size: 1.4em; /* Increased size */
+  font-weight: normal;
+  margin-right: 7em;
+  color:#ffffff;
+  font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+  line-height: 1.5;
+}
+
+.passcode-entry h1{
+  align-items: center center;
+  margin-top:3em;
+  font-size: 25px;
+}
 
 
   

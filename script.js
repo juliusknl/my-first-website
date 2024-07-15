@@ -58,3 +58,9 @@ window.addEventListener('scroll', () => {
     
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
+
+document.getElementById("passcode").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        checkPasscode();
+    }
+});
