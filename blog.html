@@ -3,12 +3,57 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>My Dynamic Background Website - Blog</title>
+    <title>Julius Knolle</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            
+            .filter-options {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .dropdown {
+                margin-bottom: 10px;
+            }
+            
+            .debate-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .debate-image, .blog-title, .blog-preview {
+                width: 90%;
+                margin: 0 auto;
+            }
+            
+            .debate-image {
+                margin-top: 2em;
+                padding-right: 0;
+            }
+            
+            .blog-title h1 {
+                font-size: 2em;
+                margin-right: 0;
+                text-align: center;
+            }
+            
+            .blog-preview h1 {
+                font-size: 1.2em;
+                margin-right: 0;
+                text-align: center;
+            }
+            
+            .divider {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+     </style>
 </head>
 <body class="blog-page">
     <header class="blog-header">
@@ -33,21 +78,21 @@
         <div class="dropdown">
             <span class="dropbtn">Topic</span>
             <div class="dropdown-content">
-                <a href="#">Politics</a>
+                <a href="blog.html">Politics</a>
             </div>
         </div>
         
         <div class="dropdown">
             <span class="dropbtn">Type</span>
             <div class="dropdown-content">
-                <a href="#">Commentary</a>
+                <a href="blog.html">Commentary</a>
             </div>
         </div>
         
         <div class="dropdown">
             <span class="dropbtn">Year</span>
             <div class="dropdown-content">
-                <a href="#">2024</a>
+                <a href="blog.html">2024</a>
             </div>
         </div>
     </div>
