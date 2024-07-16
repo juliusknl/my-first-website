@@ -20,6 +20,9 @@
             .dropdown {
                 margin-bottom: 10px;
             }
+            .dropdown.active .dropdown-content {
+            display: block;
+            }
             
             .debate-container {
                 flex-direction: column;
@@ -51,6 +54,7 @@
             .divider {
                 margin-left: 5%;
                 margin-right: 5%;
+                border-top: 1px solid #bbb;
             }
         }
      </style>
@@ -111,5 +115,22 @@
     <div class="blog-preview">
     <h1>To be honest, I couldn’t imagine a great many things that are more painful to watch than the last presidential debate. Thank god I anticipated the disaster and got drunk during this comedy show, or I might have actually smashed my screen in half. </h1>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                });
+            });
+    
+            document.addEventListener('click', function() {
+                dropdowns.forEach(function(dropdown) {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
