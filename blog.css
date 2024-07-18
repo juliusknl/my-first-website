@@ -151,8 +151,7 @@
     margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
-    font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
-    font-size: 25px; /* Adjust the base font size as needed */
+    font-family:"'Times New Roman', Times, serif"; /* You can change this to your preferred font */
     line-height: 1.8; /* Adds space between lines */
      }
 
@@ -224,46 +223,30 @@ line-height: 1.5;
         overflow-x: auto; /* Allow horizontal scrolling if needed */
       }
     
-      .dropdown {
-        flex: 0 0 auto;
-        margin-right: 10px; /* Reduced margin */
-      }
-    
-      .dropbtn {
-        padding: 8px 6px;
-        font-size: 12px;
-        background-color: transparent;
-        border: 1px solid #ffffff;
-      }
-    
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #000000;
-        min-width: 120px;
-        max-width: 150px;
-        z-index: 1;
-        top: 100%;
-        left: 0;
-      }
-    
-      .dropdown-content a {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-    
-      .dropdown.active .dropdown-content {
-        display: block;
-      }
-    
-      /* Hide scrollbar for cleaner look */
-      .filter-options::-webkit-scrollbar {
-        display: none;
-      }
-      .filter-options {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
+    .filter-options {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+    margin: 0 -10px; /* Negative margin to counter parent padding if any */
+  }
+
+  .dropdown {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .dropbtn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
     
     .blog-content {
         margin-left: 1rem; /* Reduce margin for smaller screens */
@@ -273,7 +256,7 @@ line-height: 1.5;
 
     .blog-content h1 {
         font-size: 1.3em; /* Adjust font size for main title */
-        margin-top: 1em;
+        margin-top: 2em;
         margin-bottom: 1em;
     }
 
@@ -301,3 +284,6 @@ line-height: 1.5;
         margin-bottom: 2em;
     }
 }
+
+
+

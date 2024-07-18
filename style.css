@@ -1,10 +1,32 @@
+
 html {
   height: 100%; /* Ensure full height */
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
   body {
   height: 100%;
   margin: 0; /* Ensure no default margin */
+  transform-origin: center;
+  animation-fill-mode: forwards; /* Keeps the element in the state of the last keyframe when the animation finishes */
+  animation-name: expandFromMiddle; /* Animation name */
+  animation-duration: 0s; /* Initially, no animation */
+}
+.text-container, .container {
+  animation-name: fadeIn;
+  animation-duration: 1.5s; /* Adjust the duration as needed */
+  animation-fill-mode: forwards; /* Keeps the element visible after the animation completes */
+}
+/* Class to trigger the animation */
+.animate-page {
+  animation-duration: .5s; /* Adjust duration as needed */
 }
 
   .text-container {

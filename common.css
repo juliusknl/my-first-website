@@ -1,15 +1,17 @@
+/* Typewriter cursor effect */
 body, h1, p, ul {
     margin: 0;
     padding: 0;
   }
   
+
   body {
     font-family: Arial, sans-serif;
     background-color: black; /* Set the background color of the entire page */
     color: white; /* Set the default text color */
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-
+    
   header {
     position: fixed;
     width: 100%;

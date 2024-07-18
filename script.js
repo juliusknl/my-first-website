@@ -1,12 +1,19 @@
 /*document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded!');
 });*/
-const track = document.getElementById("image-track");
+
+// Place this at the beginning or end of your script.js file
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.blog-page-title h1 span').forEach((span, index) => {
+      setTimeout(() => {
+        span.style.opacity = 1;
+      }, index * 150); // Adjust the delay as needed
+    });
+  });
 
 window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
 };
-
 window.onmousemove = e => {
     if (track.dataset.mouseDownAt === "0") return;
 
@@ -25,6 +32,8 @@ window.onmousemove = e => {
     }
 };
 
+const track = document.getElementById("image-track");
+
 window.onmouseup = () => {
     track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = track.dataset.percentage;
@@ -40,7 +49,7 @@ window.onmouseup = () => {
     }
 };
 
-// Add this to your existing script.js
+
 
 let lastScrollTop = 0;
 const header = document.querySelector('.blog-header');
@@ -94,3 +103,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
