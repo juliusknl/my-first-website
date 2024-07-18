@@ -76,6 +76,10 @@
     padding-left: 2em;
 }
 
+ul {
+  margin-left: 20px; /* Adjust the left margin as needed */
+  margin-top: -1em; /* Add some space after the list */
+}
 .blog-content li {
     margin-bottom: 0.5em;
 }
