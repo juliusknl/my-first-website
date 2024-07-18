@@ -64,3 +64,33 @@ document.getElementById("passcode").addEventListener("keyup", function(event) {
         checkPasscode();
     }
 });
+ 
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+  
+    dropdowns.forEach(dropdown => {
+      const button = dropdown.querySelector('.dropbtn');
+      
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close all other dropdowns
+        dropdowns.forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('active');
+          }
+        });
+        
+        // Toggle the clicked dropdown
+        dropdown.classList.toggle('active');
+      });
+    });
+  
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function() {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    });
+  });

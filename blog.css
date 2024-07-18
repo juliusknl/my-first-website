@@ -22,7 +22,7 @@
   }
   
   .hero-image {
-    margin-top: 4rem; /* Should match the header height */
+    margin-top: 2rem; /* Should match the header height */
   }
   
   .hero-image img {
@@ -35,22 +35,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; /* Align text to the left */
-    margin-left: 6.5cm;
+    margin-left: 7.5cm;
     margin-right: 6.5cm;
     margin-top: 2cm;
     max-width: 800px; /* Limit the width for better readability */
     margin-left: auto;
     margin-right: auto;
     font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
-    font-size: 23px; /* Adjust the base font size as needed */
-    line-height: 1.8; /* Adds space between lines */
+    font-size: 22px; /* Adjust the base font size as needed */
+    line-height: 1.7; /* Adds space between lines */
     color: #cfcfcf; /* Dark grey color for better contrast */
 }
 
 .blog-content h1 {
-    font-size: 2em; /* Larger font size for main title */
-    margin-bottom: 1em;
-    color: #ffffff; /* Black color for headings */
+  font-size: 1.7em; /* Adjust font size for main title */
+  margin-top: 1em;
+  color:#ffffff;
 }
 
 .blog-content h2 {
@@ -58,6 +58,13 @@
     margin-top: 1em;
     margin-bottom: 0.5em;
     color: #000;
+}
+
+.blog-content p:first-of-type {
+  margin-top: 2em; /* Adjust space above first paragraph */
+  margin-bottom: 2.5em;
+  font-weight: bold;
+  color:#ffffff
 }
 
 .blog-content p {
@@ -73,6 +80,130 @@
     margin-bottom: 0.5em;
 }
 
+.divider {
+  border-top: .5px solid #bbb;
+  margin: 0;
+  margin-left: 9em;
+  margin-right: 9em;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 0; /* Adjust this to match your divider's padding */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropbtn {
+  color: #ffffff;
+  padding: 15px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: .5em;
+  background-color: #000000;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #8b8686;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Ensure the filter options align with the divider */
+.filter-options, .divider {
+  max-width: 1200px; /* Adjust this value to match your divider's max-width */
+  margin-left: 7em;
+  margin-right: 7em;
+}
+.blog-page-title{
+    align-items: center;
+    margin-top:3em;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
+    font-size: 25px; /* Adjust the base font size as needed */
+    line-height: 1.8; /* Adds space between lines */
+     }
+
+  .page-header {
+  margin-left: 8.5em;
+  font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
+  font-size: 18px; /* Adjust the base font size as needed */
+  color: #ffffff; /* Dark grey color for better contrast */
+}
+
+.debate-container {
+display: flex;
+align-items: flex-start;
+margin-top: 20px;
+}
+
+.debate-image {
+width: 250%;
+margin-top: 4em;
+padding-right: 1em;
+margin-left: 7em; /* Add left margin to align with divider */
+}
+
+.debate-image img {
+width: 100%;
+height: auto;
+}
+
+.debate-text {
+width: 50%;
+}
+
+.blog-title h1 {
+font-size: 2.8em;  
+margin-bottom: 1em;
+margin-right: 2.5em;
+margin-top: 2em;
+color: #ffffff;
+font-family: 'Times New Roman', Times, serif; 
+font-size: 35px;
+}
+
+.blog-preview h1 {
+font-size: 1.4em; 
+font-weight: normal;
+margin-right: 7em;
+color:#ffffff;
+font-family: 'Times New Roman', Times, serif; 
+line-height: 1.5;
+}
+
 @media (max-width: 550px) {
 
     .small-logo {
@@ -84,6 +215,56 @@
         height: auto;
       }
 
+      .filter-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+      }
+    
+      .dropdown {
+        flex: 0 0 auto;
+        margin-right: 10px; /* Reduced margin */
+      }
+    
+      .dropbtn {
+        padding: 8px 6px;
+        font-size: 12px;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+      }
+    
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        min-width: 120px;
+        max-width: 150px;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+      }
+    
+      .dropdown-content a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    
+      .dropdown.active .dropdown-content {
+        display: block;
+      }
+    
+      /* Hide scrollbar for cleaner look */
+      .filter-options::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-options {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    
     .blog-content {
         margin-left: 1rem; /* Reduce margin for smaller screens */
         margin-right: 1rem; /* Reduce margin for smaller screens */
@@ -92,12 +273,20 @@
 
     .blog-content h1 {
         font-size: 1.3em; /* Adjust font size for main title */
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
 
     .blog-content h2 {
         font-size: 1em; /* Adjust font size for subheadings */
     }
 
+    .blog-content p:first-of-type {
+        margin-top: -.5em; /* Adjust space above first paragraph */
+        margin-bottom: 2.5em;
+        font-weight: bold;
+        color:#ffffff
+    }
     .blog-content p {
         margin-bottom: 2em; /* Adjust space between paragraphs */
     }
@@ -108,123 +297,7 @@
     }
 
     .hero-image {
-        margin-top: 6rem; /* Adjust margin for smaller screens */
+        margin-top: 0rem; /* Adjust margin for smaller screens */
+        margin-bottom: 2em;
     }
 }
-.divider {
-    border-top: .5px solid #bbb;
-    margin: 0;
-    margin-left: 9em;
-    margin-right: 9em;
-  }
-
-  .filter-options {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 0 20px; /* Adjust this to match your divider's padding */
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.dropbtn {
-    color: #ffffff;
-    padding: 15px;
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    margin-top: .5em;
-    background-color: #000000;
-    min-width: 150px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #8b8686;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Ensure the filter options align with the divider */
-.filter-options, .divider {
-    max-width: 1200px; /* Adjust this value to match your divider's max-width */
-    margin-left: auto;
-    margin-right: auto;
-}
-  .blog-content {
-    align-items: center;
-     margin-top:3em;
-     font-size: 25px;
-  }
-
-    .page-header {
-    margin-left: 8.5em;
-    font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
-    font-size: 18px; /* Adjust the base font size as needed */
-    color: #ffffff; /* Dark grey color for better contrast */
-  }
-
-  .debate-container {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.debate-image {
-  width: 250%;
-  margin-top: 4em;
-  padding-right: 1em;
-  margin-left: 7.7em; /* Add left margin to align with divider */
-}
-
-.debate-image img {
-  width: 100%;
-  height: auto;
-}
-
-.debate-text {
-  width: 50%;
-}
-
-.blog-title h1 {
-  font-size: 2.8em;  
-  margin-bottom: 1em;
-  margin-right: 2.5em;
-  margin-top: 2em;
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif; 
-  font-size: 35px;
-}
-
-.blog-preview h1 {
-  font-size: 1.4em; 
-  font-weight: normal;
-  margin-right: 7em;
-  color:#ffffff;
-  font-family: 'Times New Roman', Times, serif; 
-  line-height: 1.5;
-}
-
-
-
-  
