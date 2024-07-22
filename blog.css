@@ -43,7 +43,7 @@
     margin-right: auto;
     font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
     font-size: 22px; /* Adjust the base font size as needed */
-    line-height: 1.7; /* Adds space between lines */
+    line-height: 1.6; /* Adds space between lines */
     color: #cfcfcf; /* Dark grey color for better contrast */
 }
 
@@ -51,13 +51,13 @@
   font-size: 1.7em; /* Adjust font size for main title */
   margin-top: 1em;
   color:#ffffff;
+  line-height: 1.2;
 }
 
 .blog-content h2 {
-    font-size: 2em; /* Size for subheadings */
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    color: #000;
+    font-size: 1em; /* Size for subheadings */
+    margin-bottom: -1em;
+    color: #a3a2a2;
 }
 
 .blog-content p:first-of-type {
@@ -287,6 +287,13 @@ line-height: 1.5;
         margin-top: 0rem; /* Adjust margin for smaller screens */
         margin-bottom: 2em;
     }
+
+    .blog-content h2 {
+      font-size: 1em; /* Size for subheadings */
+      margin-bottom: 0em;
+      margin-top: -.5em;
+      color: #a3a2a2;
+  }
 }
 
 
