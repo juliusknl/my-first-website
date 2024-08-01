@@ -47,8 +47,8 @@ html {
   }
 
   :root {
-    --color-bg1: rgb(108, 0, 162);
-    --color-bg2: rgb(0, 17, 82);
+    --color-bg1: #ad5479;
+    --color-bg2: #19181A;
     --color1: 18, 113, 255;
     --color2: 221, 74, 255;
     --color3: 100, 220, 255;

@@ -6,7 +6,7 @@ body, h1, p, ul {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: black; /* Set the background color of the entire page */
+  background-color: #19181A; /* Set the background color of the entire page */
   color: white; /* Set the default text color */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(255, 255, 255);
+    background:  #19181A;
+    overflow-x: hidden;
+}
+
+.small-logo {
+    position: fixed; /* Change to fixed positioning */
+    left: 1rem;
+    top: 0.5rem; /* Adjust top position */
+    width: 40px; /* Adjust size as needed */
+    width: 4vw;
+    min-width: 4px;
+    height: auto;
+  }
+  
+  
+  /* Add these new styles to your existing CSS */
+  
+  .blog-header {
+    background-color: #19181A;
+    opacity: 0.9;
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .blog-header.hidden {
+    transform: translateY(-100%);
+  }
+  
+  .hero-image {
+    margin-top: 2rem; /* Should match the header height */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+    section { 
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 150px;
+    padding: 100px 20vw;  
+    }
+
+    .blue {
+    background: #3c31dd;
+    }
+    .green {
+    background: #479761;
+    }
+    .pink {
+    background: #ad5479;
+    min-height: 300px;
+    }
+    .dark {
+    background: #19181A;
+    min-height: 300px;
+    }
+
+    .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .wave svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 90px;
+    }
+    
+    .wave .shape-fill {
+        fill: #AD5479;
+    }
+
+    .spacer {
+    aspect-ratio: 960/300; 
+    width: 100%;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover;
+    }
+    
+    .layer1 {
+    background-image: url('./svg/layer1.svg');
+    }
+    .flip {
+    transform: rotate (180deg) ;
+    }
+
+    .blob-motion{
+        position: absolute;
+        transform: translateY(50%);
+    }
