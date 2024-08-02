@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="common.css">
-    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="common.css">
+        <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+        
+    </head>
 <body>
     <header class="blog-header">
         <div class="container">
@@ -24,17 +25,17 @@
         </div>
     </header>
     <section>
-        <h1>Nice Curves</h1>
-        <p>Nobis quibusdam culpa in unde consequatur eos. Optio accusantium ipsa, ipsum dolorum fugiat similique cupiditate nam sit impedit a fugit at nobis, quam id ullam quod, nisi sapiente dicta debitis!</p>
+        <h01>I am Julius.</h01>
+        <p></p>
     </section>
     <div class="spacer layer1"></div>
     <section class="pink">
-        <h1>Nice Curves</h1>
-        <p>Asperiores dicta vitae ullam quia quidem optio illo! At explicabo unde quibusdam amet, dolorem voluptatum iste iure, ea vitae eos quae reiciendis adipisci, ad rerum distinctio tenetur minima expedita veritatis.</p>
+        <h0 class="reveal-type">Studied business at Berkeley Haas, delving into responsible AI and carbon accounting while developing a passion for research and technology.</h0>
+        <p></p>
     </section>
     <section class="dark">
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas magnam nam, voluptatem quis repellendus natus error amet ratione voluptates animi iure numquam molestiae, quo eveniet quae, incidunt provident delectus doloremque!</p>
+        <h0 class="reveal-type">Interning at a carbon accounting startup, where I contribute to developing software solutions and exploring advanced AI models.</h0>
+        <p></p>
         <div class="wave">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -70,24 +71,56 @@
     </section>
     <div class="spacer layer1"></div>
     <section class="pink">
-        <h1>Nice Curves</h1>
-        <p>Quod quisquam porro, veritatis veniam praesentium consequatur! Adipisci perspiciatis ullam, placeat commodi laudantium consequuntur, ab dolorem molestias mollitia enim nam asperiores sequi error nostrum quasi repudiandae odio dolores sit nisi?</p>
+        <h0 class="reveal-type">Enthusiastic about sports and calisthenics, including mastering skills like the human flag and muscle-up, alongside a love for reading and learning.</h0>
+        <p></p>
     </section>
-    <!-- <section>
-        <h1>Nice Curves</h1>
-        <p>Accusantium velit laborum eius voluptatibus officia expedita iure eum nulla itaque vel eligendi illum alias fuga cum nostrum molestiae fugiat, porro molestias. Qui neque, nisi perferendis aliquam error nobis totam!</p>
-    </section>  
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Magni et ullam, itaque dolores velit ut, necessitatibus commodi quas quos maiores officiis saepe, sit tempora culpa sed tenetur. Exercitationem inventore, delectus repudiandae maiores totam voluptate ipsa explicabo natus ex.</p>
-    </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Repellat voluptatibus blanditiis reprehenderit veniam, nihil impedit inventore non ut maiores, odio corrupti pariatur suscipit sint at officiis soluta distinctio sequi? Iure eum harum iusto animi tempora nam temporibus voluptatum.</p>
-    </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Adipisci, doloribus reprehenderit voluptates id delectus laudantium blanditiis voluptatem natus doloremque optio consequuntur quibusdam quo pariatur explicabo repellendus quidem, dolorem quam perspiciatis neque? Dicta beatae esse enim quia, harum mollitia!</p>
-    </section> -->
+    <section></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+
+    <script>
+        
+        gsap.registerPlugin(ScrollTrigger)
+    
+        
+        const splitTypes = document.querySelectorAll('.reveal-type') 
+    
+        splitTypes.forEach((char, i) => {
+
+            const text = new SplitType(char, { types: 'chars' })
+    
+            gsap.from(text.chars, {
+                scrollTrigger: {
+                    trigger: char,
+                    start: 'top 80%',
+                    end: 'top 30%',
+                    scrub: true,
+                    markers: false
+                },
+                opacity: 0.2,
+                stagger: 0.1,
+    
+            })
+    
+        })
+    
+        // const lenis = new Lenis()
+
+        // lenis.on('scroll',(e) => {
+        // console.log(e)
+        // })
+
+        // function raf(time) {
+        // lenis.raf(time)
+        // requestAnimationFrame(raf)
+        // } 
+
+        // requestAnimationFrame(raf)
+    </script>
+    
 </body>
 </html>
