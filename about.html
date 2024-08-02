@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>About Me</title>
         <link rel="stylesheet" href="about.css">
         <link rel="stylesheet" href="common.css">
         <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
@@ -28,13 +28,24 @@
         <h01>I am Julius.</h01>
         <p></p>
     </section>
+    <div class="center-con">
+        <div class="round">
+            <div id="cta">
+                <span class="arrow primera next "></span>
+                <span class="arrow segunda next "></span>
+                <a href = "#target" class="scroll-button"> 
+
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="spacer layer1"></div>
     <section class="pink">
         <h0 class="reveal-type">Studied business at Berkeley Haas, delving into responsible AI and carbon accounting while developing a passion for research and technology.</h0>
         <p></p>
     </section>
     <section class="dark">
-        <h0 class="reveal-type">Interning at a carbon accounting startup, where I contribute to developing software solutions and exploring advanced AI models.</h0>
+        <h0 class="reveal-type" style="position: absolute;">Interning at a carbon accounting startup, where I contribute to developing software solutions and exploring advanced AI models.</h0>
         <p></p>
         <div class="wave">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -43,7 +54,7 @@
                 <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
             </svg>
         </div>
-        <div class="blob-motion">
+        <div id = "target" class="blob-motion">
         <svg id="visual" viewBox="0 0 960 300" width="960" height="300" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(464.6145950948073 131.76272615945192)">
@@ -97,7 +108,7 @@
                 scrollTrigger: {
                     trigger: char,
                     start: 'top 80%',
-                    end: 'top 30%',
+                    end: 'top 35%',
                     scrub: true,
                     markers: false
                 },
@@ -108,19 +119,59 @@
     
         })
     
-        // const lenis = new Lenis()
+         const lenis = new Lenis()
 
-        // lenis.on('scroll',(e) => {
-        // console.log(e)
-        // })
+         lenis.on('scroll',(e) => {
+        console.log(e)
+        })
 
-        // function raf(time) {
-        // lenis.raf(time)
-        // requestAnimationFrame(raf)
-        // } 
+         function raf(time) {
+         lenis.raf(time)
+         requestAnimationFrame(raf)
+         } 
 
-        // requestAnimationFrame(raf)
+        requestAnimationFrame(raf)
     </script>
+   <script>
+    document.querySelector('.round').addEventListener('click', function() {
+        smoothScroll(650, 1500); // 500px scroll distance, 1500ms duration
+    });
     
+    function smoothScroll(distance, duration) {
+        const start = window.pageYOffset;
+        const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+    
+        function scroll() {
+            const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+            const time = Math.min(1, ((now - startTime) / duration));
+            
+            window.scrollTo(0, start + distance * easeInOutCubic(time));
+            
+            if (time < 1) requestAnimationFrame(scroll);
+        }
+    
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+        }
+    
+        requestAnimationFrame(scroll);
+    }
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('.blog-header');
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 0) {
+                // Scrolling down and not at the top
+                header.classList.add('hidden');
+            } else if (scrollTop < lastScrollTop || scrollTop === 0) {
+                // Scrolling up or at the top
+                header.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+        </script>
 </body>
 </html>

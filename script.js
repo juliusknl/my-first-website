@@ -2,6 +2,7 @@
     console.log('JavaScript loaded!');
 });*/
 
+
 // Place this at the beginning or end of your script.js file
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.blog-page-title h1 span').forEach((span, index) => {
@@ -48,7 +49,6 @@ window.onmouseup = () => {
         }, { duration: 1200, fill: "forwards" });
     }
 };
-
 
 
 let lastScrollTop = 0;
