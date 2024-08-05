@@ -24,8 +24,8 @@
             </nav>
         </div>
     </header>
-    <section>
-        <h01>I am Julius.</h01>
+    <section >
+        <h01 class="reveal-type-first" data-bg-color="#ad5479" data-fg-color="white">I am Julius.</h01>
         <p></p>
     </section>
     <div class="center-con">
@@ -41,11 +41,11 @@
     </div>
     <div class="spacer layer1"></div>
     <section class="pink">
-        <h0 class="reveal-type">Studied business at Berkeley Haas, delving into responsible AI and carbon accounting while developing a passion for research and technology.</h0>
+        <h0 class="reveal-type" data-bg-color="#ad5479" data-fg-color="white">Studied business at Berkeley Haas, delving into responsible AI and carbon accounting while developing a passion for research and technology.</h0>
         <p></p>
     </section>
     <section class="dark">
-        <h0 class="reveal-type" style="position: absolute;">Interning at a carbon accounting startup, where I contribute to developing software solutions and exploring advanced AI models.</h0>
+        <h0 class="reveal-type" data-bg-color="#19181A" data-fg-color="white">Interning at a carbon accounting startup, where I contribute to developing software solutions and exploring advanced AI models.</h0>
         <p></p>
         <div class="wave">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -55,7 +55,7 @@
             </svg>
         </div>
         <div id = "target" class="blob-motion">
-        <svg id="visual" viewBox="0 0 960 300" width="960" height="300" xmlns="http://www.w3.org/2000/svg"
+        <!-- <svg id="visual" viewBox="0 0 960 300" width="960" height="300" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(464.6145950948073 131.76272615945192)">
                 <path id="blob1"
@@ -67,7 +67,7 @@
                     d="M86.4 -91.8C112.8 -80.8 135.7 -54.4 144.7 -22.7C153.6 9 148.7 46 128.4 67.6C108.2 89.2 72.5 95.3 37.9 110.9C3.2 126.4 -30.4 151.3 -56.2 145.7C-82 140.1 -99.9 104.1 -106.6 71.6C-113.3 39.2 -108.9 10.4 -108.6 -24C-108.4 -58.5 -112.4 -98.6 -95 -111.1C-77.6 -123.7 -38.8 -108.7 -4.4 -103.5C30 -98.3 60 -102.8 86.4 -91.8"
                     fill="#479761"></path>
             </g>
-        </svg>
+        </svg> -->
 
             <script>
             const tween = KUTE.fromTo (
@@ -82,7 +82,7 @@
     </section>
     <div class="spacer layer1"></div>
     <section class="pink">
-        <h0 class="reveal-type">Enthusiastic about sports and calisthenics, including mastering skills like the human flag and muscle-up, alongside a love for reading and learning.</h0>
+        <h0 class="reveal-type" data-bg-color="#ad5479" data-fg-color="white">Enthusiastic about sports and calisthenics, including mastering skills like the human flag and muscle-up, alongside a love for reading and learning.</h0>
         <p></p>
     </section>
     <section></section>
@@ -95,42 +95,105 @@
 
     <script>
         
+        document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger)
+
+        // Target the specific element for the page load animation
+        const firstText = document.querySelector('.reveal-type-first');
+
+    if (firstText) {
+        const bg = firstText.dataset.bgColor
+        const fg = firstText.dataset.fgColor
+
+        // Split text into lines
+        const text = new SplitType(firstText, { types: 'lines' })
+
+        // Animation for lines on page load
+        gsap.to(firstText, {
+            visibility: 'visible',
+            duration: 0, // Instant visibility change
+            onComplete: () => {
+                // Animation for lines on page load
+                gsap.fromTo(text.lines,
+                    {
+                        scaleY: 0,
+                        y: 10, // Start from below the viewport
+                        opacity: 0,
+                        transformOrigin: 'bottom',
+                    },
+                    {
+                        scaleY: 1,
+                        y: 0,
+                        opacity: 1,
+                        color: fg,
+                        duration: 0.5,
+                        stagger: {
+                            amount: 0.6, // Total duration of the stagger
+                            from: "start" // Start the stagger from the beginning
+                        },
+                        delay: 0.2 // Optional: Add a delay before the animation starts
+                    }
+                );
+            }
+        })
+    }
+     
     
-        
         const splitTypes = document.querySelectorAll('.reveal-type') 
     
-        splitTypes.forEach((char, i) => {
+        splitTypes.forEach((element) => {
 
-            const text = new SplitType(char, { types: 'chars' })
+            const bg = element.dataset.bgColor
+            const fg = element.dataset.fgColor
+
+            const text = new SplitType(element, { types: 'lines' })
     
-            gsap.from(text.chars, {
-                scrollTrigger: {
-                    trigger: char,
-                    start: 'top 80%',
-                    end: 'top 40%',
-                    scrub: true,
-                    markers: false
+            gsap.fromTo(text.lines,
+            {
+                scaleY: 0,
+                y: 10,
+                transformOrigin: 'bottom',
+            },       
+                {   
+                scaleY: 1,
+                y: 0,
+                color: fg,
+                duration: 0.3,
+                stagger: {
+                amount: .3, // Total duration of the stagger
+                from: "start" // Start the stagger from the beginning
                 },
-                opacity: 0.2,
-                stagger: 0.1,
-    
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 70%',
+                    end: 'top 30%',
+                    scrub: false,
+                    markers: false,
+                    toggleActions: 'play play reverse reverse'
+                }
             })
     
         })
     
-         const lenis = new Lenis()
+         const lenis = new Lenis(
+            {
+            smooth: true, // Enable smooth scrolling
+            duration: 0.12,  // Duration in seconds for the scroll effect (lower value = faster)
+            easing: (t) => t // Easing function for smoothness (linear easing)
+    }
+         )
 
-         lenis.on('scroll',(e) => {
+        lenis.on('scroll',(e) => {
         console.log(e)
         })
 
          function raf(time) {
          lenis.raf(time)
          requestAnimationFrame(raf)
-         } 
+         }
 
         requestAnimationFrame(raf)
+    })
     </script>
    <script>
     document.querySelector('.round').addEventListener('click', function() {

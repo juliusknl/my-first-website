@@ -25,7 +25,9 @@ body {
   
   
   /* Add these new styles to your existing CSS */
-  
+  .reveal-type-first {
+    visibility: hidden; /* Hide text initially */
+  }
   .blog-header {
     background-color: #19181A;
     opacity: 0.9;
@@ -144,7 +146,21 @@ body {
   }
   
     .h1 { 
-      font-size: clamp (2rem, 5vw,8rem) ;
+      font-size: clamp (2rem, 5vw,8rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; /* Align text to the left */
+      margin-left: 7.5cm;
+      margin-right: 6.5cm;
+      margin-top: 2cm;
+      max-width: 800px; /* Limit the width for better readability */
+      margin-left: auto;
+      margin-right: auto;
+      font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
+      font-size: 22px; /* Adjust the base font size as needed */
+      line-height: 1.6; /* Adds space between lines */
+      color: #cfcfcf; /* Dark grey color for better contrast */
     }
 
       /* &:nth-of-type(1) {
