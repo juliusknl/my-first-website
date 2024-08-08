@@ -49,10 +49,9 @@ body {
     section { 
     position: relative;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    min-height: 150px;
-    padding: 100px 20vw;  
+    flex-direction: column;  
+    min-height: 125px;
+    padding: 100px 15vw;  
     }
 
     .center-con {
@@ -132,48 +131,20 @@ body {
       font-family: 'Times New Roman', Times, serif;
       margin-top: 7.5em;
       margin-bottom: -2.5em;
+      text-align: center;
     }
 
     h0 {
-      font-size: 2.5rem; /* Adjust as needed */
-      text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      max-width: 85%; /* Adjust for desired width */
-      margin: 100px auto; /* Adjust this value to control top/bottom spacing */
-      padding: 0 20px; /* Add some horizontal padding */
-      line-height: 1.4; /* Adjust for desired line spacing */
-      word-break: keep-all;
-  }
-  
-    .h1 { 
-      font-size: clamp (2rem, 5vw,8rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      font-size: 1.5rem;  /* Adjust the font size */
       align-items: flex-start; /* Align text to the left */
-      margin-left: 7.5cm;
-      margin-right: 6.5cm;
-      margin-top: 2cm;
-      max-width: 800px; /* Limit the width for better readability */
-      margin-left: auto;
-      margin-right: auto;
-      font-family:'Times New Roman', Times, serif; /* You can change this to your preferred font */
-      font-size: 22px; /* Adjust the base font size as needed */
-      line-height: 1.6; /* Adds space between lines */
-      color: #cfcfcf; /* Dark grey color for better contrast */
-    }
-
-      /* &:nth-of-type(1) {
-      border-bottom: 1px solid black;
-      }
-      &:nth-of-type(3) {
-        background:#479761;
-        }
-      &:nth-of-type(4) {
-        background:#3c31dd;
-        } */
-    
-
+      text-align: left;
+      font-family: 'Times New Roman', Times, serif;
+      max-width: 75%; /* Adjust for desired width */
+      margin: 20px 20px;  /*Adjust this value to control top/bottom spacing */
+      padding: 0px 0px; /* Add some horizontal padding */
+      line-height: 1.5; /*Adjust for desired line spacing  */
+      word-break: keep-all; 
+    } 
 
     .blue {
     background: #3c31dd;
