@@ -11,6 +11,7 @@ html {
     opacity: 1;
   }
 }
+
   body {
   height: 100%;
   margin: 0; /* Ensure no default margin */
@@ -256,5 +257,3 @@ html {
     max-width: 80px !important;
 }
 }
-  
-

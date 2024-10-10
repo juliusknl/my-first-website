@@ -129,11 +129,11 @@ body {
 
 
     h01{
-      font-size: 30px ;
+      font-size: 40px ;
       font-family: 'Times New Roman', Times, serif;
       margin-top: 7.5em;
       /* margin-left: 30%; */
-      margin-bottom: -2.5em;
+      margin-bottom: -2.9em;
       text-align: center;
       /* position: absolute; */
 
@@ -145,14 +145,14 @@ body {
 
 
     h0 {
-      font-size: 1.5rem;  /* Adjust the font size */
-      align-items: flex-start; /* Align text to the left */
+      font-size: 2rem;  /* Adjust the font size */
+      align-items:self-end; /* Align text to the left */
       text-align: left;
       font-family: 'Times New Roman', Times, serif;
-      max-width: 75%; /* Adjust for desired width */
+      max-width: 70%; /* Adjust for desired width */
       margin: 20px 20px;  /*Adjust this value to control top/bottom spacing */
       padding: 0px 0px; /* Add some horizontal padding */
-      line-height: 1.5; /*Adjust for desired line spacing  */
+      line-height: 1.4; /*Adjust for desired line spacing  */
       word-break: keep-all; 
     } 
 
